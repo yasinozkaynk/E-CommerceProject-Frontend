@@ -1,0 +1,46 @@
+<div  class="container">
+  <main>
+    <div class="row g-5">
+      <div class="col-md-7 col-lg-9 ">
+        <form class="needs-validation" [formGroup]="userForm">
+          <div class="row g-4">
+            <div [ngStyle]="{'background-color':'white'}" class="d-flex flex-wrap justify-content-center justify-content-xl-start"
+            style="gap: 0.45em; padding: 0;margin-top: 10px;">
+            <div id="button1" class="card" style="width: 15rem;">
+              <img src="https://media-exp1.licdn.com/dms/image/C4D03AQG4Lf1lCCUyMg/profile-displayphoto-shrink_200_200/0/1606748229028?e=1634774400&v=beta&t=HsRiwjB9yuzDyhSF_Vcfi9CxBUKffGsakD89eQOl790"  class="card-img-top" alt="...">
+            </div>
+          </div>
+
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">Ad</label>
+              <input type="text"formControlName="firstName" class="form-control" id="firstName" placeholder="{{authService.name}}"  required>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Soyad</label>
+              <input type="text" class="form-control" formControlName="lastName" id="lastName" placeholder="{{authService.surname}}" required>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="email" formControlName="email" id="email" class="form-control"  placeholder="{{authService.email}}" required>
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="text" class="form-label">Şifre <span class="text-muted"></span></label>
+              <input type="password" formControlName="password" class="form-control"  >
+            </div>
+            <div class="col-12">
+              <label for="text" class="form-label">Şifre Tekrar <span class="text-muted"></span></label>
+              <input type="password" class="form-control"  >
+            </div>
+          </div>
+          <hr class="md-4">
+          <button class="w-100 btn btn btn-lg" id="button1" (click)="userUpdate()" type="submit">Bilgileri Güncelle</button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>

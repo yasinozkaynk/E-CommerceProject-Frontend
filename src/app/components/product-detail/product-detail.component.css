@@ -1,0 +1,26 @@
+button {
+    border-radius: 30px;
+    padding: 10px 130px;
+}
+#test {
+    border-radius: 25px;
+  
+    border: 1px solid #fd9731;
+  
+    padding: 30px; 
+  
+    width: 360px;
+  
+    height: 330px; 
+}
+#test2 {
+    border-radius: 25px;
+  
+    border: 3px solid #fd9731;
+  
+    padding: 8px; 
+  
+    width: 500px;
+  
+    height: 500px; 
+}

@@ -1,0 +1,23 @@
+#button1 {
+    border-radius: 20px;
+    padding: 7px 10px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
+}
+#button1:hover{
+    background-color: #fd9731; /*Carrot*/
+    color: white;
+}
+#kutu{
+    width: 100px;
+    height: 60px;
+    background-color:white;
+}
+
+
+
+
+  
+  
+ 

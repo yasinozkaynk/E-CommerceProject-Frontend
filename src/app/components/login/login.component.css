@@ -1,0 +1,146 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#button1 {
+  border-radius: 20px;
+  padding: 7px 10px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#button1:hover{
+  background-color: #fd9731; /*Carrot*/
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#button1 {
+
+  display: inline-block;
+
+  padding: 7px 10px;
+
+  font-size: 19px;
+
+  cursor: pointer;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  outline: none;
+
+  color: #fff;
+
+  background-color: #fd9731; /*Carrot*/
+  border: none;
+
+  border-radius: 15px;
+
+  box-shadow: 0 9px #999;
+}
+#button{
+
+  display: inline-block;
+
+  padding: 7px 10px;
+
+  font-size: 23px;
+
+  cursor: pointer;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  outline: none;
+
+  color: #fff;
+
+  background-color: #fd9731; /*Carrot*/
+  border: none;
+
+  border-radius: 15px;
+
+  box-shadow: 0 9px #999;
+}
+#button3 {
+
+  background-color: white;
+
+  color: black;
+
+  border: 2px solid blue
+}
+input {
+  
+	padding:8px 20px;
+  
+	border: 1px solid  #fd9731;
+  
+	border-left: 3px solid;
+  
+	border-left-color:#fd9731;
+  
+	border-radius: 5px;
+  
+	transition: border-color .8s ease-out;
+  }
+  
+  input:focus{
+  
+	outline:none;
+  
+	border: 1px solid #eee;
+  
+	border-left: 3px solid #888;
+  
+  }
+  #test {
+    border-radius: 25px;
+  
+    border: 1px solid #fd9731;
+  
+    padding: 20px; 
+  
+    width: 450px;
+  
+    height: 590px; 
+}
+

@@ -1,0 +1,52 @@
+<ul></ul>
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div *ngFor="let product of products" class="col-md-5">
+            <div>
+                <div>
+                    <ul></ul>
+                    <img [src]="product.imagePath"
+                        class="card-img-top" height="500" width="400" alt="...">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5" *ngFor="let product of products">
+            <div>
+                <div>
+                    <div class="card-body" align="center">
+                        <ul></ul>
+                        <div class="text-center">
+                            <font class="card-text" color="#F57C00" fice="COURİER" size="5">{{product.productName}} </font>
+                            <ul></ul>
+                             <font color="#F57C00" fice="COURİER" size="2">Açıklama......</font>
+                             <ul></ul>
+                            <font class="card-text" size="4" color="#F57C00">KDV'li Fiyat:</font>
+                            <font class="card-text" face="COURİER" size="5" color="#F57C00">{{product.unitPrice |
+                                vatAdded:10 | currency }}</font>
+                            <div class="bg-white" align="center">
+                                <button id="button" class="btn btn-warning " (click)="addToCart(product)"
+                                    type="button">Sepete Ekle</button>
+                            </div>
+                            <font class="card-text" face="COURİER" color="#F57C00" size="2"> Hızlı Teslimat: 1 gün
+                                içinde
+                                kargoda</font>
+                        </div>
+                        <ul></ul>
+                        <div id="test" class="text-left card">
+                            <li class="card-text" face="COURİER" size="5" color="#F57C00">Öne Çıkan Bilgiler</li>
+                            <li>15 gün içinde ücretsiz iade. Detaylı bilgi için tıklayın.</li>
+                            <li>Konsept çekimlerinde renkler ışık farklılığından dolayı değişiklik gösterebilir.</li>
+                            <li>Bu üründen en fazla 10 adet sipariş verilebilir.</li>
+                            <li>Kampanya fiyatından satılmak üzere 100 adetten fazla stok sunulmuştur.</li>
+                            <li>Listelenen fiyat 6 Ekim 2021 tarihine kadar geçerlidir.</li>
+                            <li>Bu ürün indirim kampanyasına dahil değildir.</li>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-product-comment></app-product-comment>

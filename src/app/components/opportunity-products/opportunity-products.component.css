@@ -1,0 +1,10 @@
+.center{
+    /* Genel ayarlamalar */
+    width:1000px;
+    height:330px;
+    /* Ortalama kodları */
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:#fd9731 ;
+  }

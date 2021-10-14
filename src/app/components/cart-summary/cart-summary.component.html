@@ -1,0 +1,48 @@
+<ul class="navbar-nav mr-auto mt-2 mt-lg-4"></ul>
+<div *ngIf="cartItems.length<=0"  class="alert alert-warning" role="alert">
+  Sepetiniz Boş</div>
+
+<div *ngIf="cartItems.length>0" class="container">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="table-responsive col-md-9" align-self="center">
+      <table class="table table-shopping ">
+        <thead>
+          <tr>
+            <td></td>
+            <th>Ürün adı</th>
+            <th>Kategori</th>
+            <th>Fiyat</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let cartItem of cartItems">
+          <tr>
+            <td>
+              <div class="img-container">
+                <img [src]="cartItem.product.imagePath" rel="nofollow" alt="...">
+              </div>
+            </td>
+            <td>{{cartItem.product.productName}}</td>
+            <td>{{cartItem.product.categoryId}}</td>
+            <td>{{cartItem.product.unitPrice |vatAdded:10 | currency }}</td>
+            <td class="td-number">
+              {{cartItem.quantity}} adet
+              <div class="btn-group">
+                <button (click)="addToCart(cartItem.product)"  class="btn btn-round btn-info btn-sm"> <i
+                    class="material-icons">+</i> </button>
+                    <td>{{cartService.totalPrice |vatAdded:10 | currency}}</td>
+                <button (click)="removeFromCart(cartItem.product)" class="btn btn-round btn-info btn-sm"> <i
+                    class="material-icons">-</i> </button>
+              </div>
+              <div class="btn-group">
+              </div>
+           </td>
+         </tr>
+        </tbody>
+        <button class="btn">SEPETİ ONAYLA</button>
+        
+     </table>
+  </div>
+</div>
+</div>

@@ -1,0 +1,50 @@
+<ul class="navbar-nav mr-auto mt-2 mt-lg-4"></ul>
+<div class="col-md-11"> 
+    <main class="form-signin">
+        <form id="test" class="text-center" [formGroup]="formGroup">
+            <div class="text-center">
+                <font face="COURİER" size="7" color="#F57C00">Merhaba,</font>
+            </div>
+            <font face="COURİER" class="text-center" size="4" color="#F57C00">HemanAl'a giriş yap veya hesap oluştur
+            </font>
+            <hr class="my-2 btn-warning">
+            <div class="form-floating">
+                <input type="text" formControlName="firstName" class="form-control" placeholder="Ad">
+                <label for="floatingPassword">Ad</label>
+            </div>
+            <hr class="my-1 btn-warning">
+            <div class="form-floating">
+                <input type="text" formControlName="lastName" class="form-control" placeholder="lastName">
+                <label for="floatingPassword">Soyad</label>
+            </div>
+            <hr class="my-1 btn-warning">
+            <div class="form-floating">
+                <input type="email" formControlName="email" class="form-control" placeholder="name@example.com">
+                <label for="floatingInput">EPosta</label>
+            </div>
+            <hr class="my-1 btn-warning">
+            <div class="form-floating">
+                <input type="password" formControlName="password" class="form-control" id="floatingPassword"
+                    placeholder="Password">
+                <label for="floatingPassword">Şifre</label>
+            </div>
+            <label>
+                <font face="COURİER" size="2" color="#F57C00">şifre en az 5 karakter olmalı</font>
+            </label>
+            <button  id="button" class="w-100 btn btn-lg btn-warning" (click)="registerAdd()">Üye Ol</button>
+            <div class="btn-wrapper text-center">
+                <a id="button1" href="#" class="btn btn-warning btn-icon">
+                    <span class="btn-inner--icon"><img
+                            src="https://raw.githack.com/creativetimofficial/argon-dashboard/master/assets/img/icons/common/github.svg"></span>
+                    <span class="btn-inner--text">Github</span>
+                </a>
+                <a id="button1" href="#" class="btn btn btn-warning  ">
+                    <span class="btn-inner--icon"><img
+                            src="https://raw.githack.com/creativetimofficial/argon-dashboard/master/assets/img/icons/common/google.svg"></span>
+                    <span class="btn-inner--text">Google</span>
+                </a>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-4"></ul>
+            </div>
+        </form>
+    </main>
+</div>

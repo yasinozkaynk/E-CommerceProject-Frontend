@@ -1,0 +1,18 @@
+<ul></ul>
+<div *ngIf="favoriteItems.length<=0"  class="alert alert-warning" role="alert">
+  Favoriler Boş</div>
+<div *ngIf="favoriteItems.length>0"  class="d-flex flex-wrap justify-content-center justify-content-xl-start"
+  style="gap: 0.45em; padding: 0;margin-top: 10px;">
+  <div *ngFor="let favoriteItem of favoriteItems" class="card" style="width: 15rem;">
+    <div>
+    </div>
+    <img [src]="favoriteItem.product.imagePath" class="card-img-top" alt="...">
+    <div class="card-body" align="center">
+      <h6 class="">{{favoriteItem.product.productName}}</h6>
+      <p class="card-text">KDV'li Fiyat: {{favoriteItem.product.unitPrice | vatAdded:10 | currency }} </p>
+    </div>
+    <div class="bg-white" align="center">
+      <button class="btn btn-warning" type="button">Sepete Ekle</button>
+    </div>
+  </div>
+</div>

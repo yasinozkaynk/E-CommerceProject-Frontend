@@ -1,0 +1,46 @@
+button {
+    border-radius: 30px;
+    padding: 10px 150px;
+}
+#button1 {
+    border-radius: 20px;
+    padding: 7px 7px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-left: 8px solid #fd9731;
+
+}
+#button1:hover{
+    background-color: #fd9731; /*Carrot*/
+    color: white;
+    border-left: 8px solid #fd9731;
+
+}
+#kutu{
+	width: 600px;
+	margin:auto;
+}
+input {
+  
+	padding:9px 20px;
+  
+	border: 2px solid  #fd9731;
+  
+	border-left: 8px solid;
+  
+	border-left-color:#fd9731;
+  
+	border-radius: 29px;
+  
+	transition: border-color .8s ease-out;
+  }
+  
+  input:focus{
+  
+	outline:none;
+  
+	border: 1px solid #eee;
+  
+	border-left: 8px solid #888;
+  
+  }

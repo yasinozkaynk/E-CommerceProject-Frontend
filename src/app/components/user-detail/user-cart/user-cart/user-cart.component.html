@@ -1,0 +1,79 @@
+<ul></ul>
+<p>
+    <button class="btn btn-warning"type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Ürün Ekle
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+        <app-product-add></app-product-add>
+    </div>
+  </div>
+<div [ngStyle]="{'background-color':'white'}" class="d-flex flex-wrap justify-content-center justify-content-xl-start"
+  style="gap: 0.45em; padding: 0;margin-top: 10px;">
+  <div id="button1" *ngFor="let product of products "  class="card"
+    style="width: 15rem;">
+    <div class="card-foter" > 
+      <img [src]="product.imagePath" class="card-img-top" alt="...">
+    </div>
+    <div class="card-foter" align="center">
+      <h6 face="COURİER"> {{product.productName}} </h6>
+      <font class="card-text" size="4" color="#F57C00">KDV'li Fiyat:</font>
+      <font class="card-text" face="COURİER" size="5" color="#F57C00">{{product.unitPrice | vatAdded:10 | currency }}
+      </font>
+    </div>
+    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Ürünü Güncelle</button>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" >
+            <form [formGroup]=" poductUpdateForm" class="needs-validation" novalidate>
+                <div class="row g-3">
+                    <div class=" form-group col-sm-6 ">
+                        <label for="productName">Ürün Kodu</label>
+                        <input type="text" id="productId" formControlName="productId" class="form-control"
+                            placeholder="Ürün Kodu" />
+                    </div>
+                    <div class=" form-group col-sm-6 ">
+                        <label for="productName">Ürün adı</label>
+                        <input type="text" id="productName" formControlName="productName" class="form-control"
+                            placeholder="Ürün adı" />
+                    </div>
+                    <div class="col-12">
+                        <label for="categoryId">Çategori</label>
+                        <div class="form-group">
+                            <input type="number" id="categoryId" formControlName="categoryId"
+                                class="form-control" placeholder="categoryId" />
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <label for="unitsInStock">Stok Adedi</label>
+                        <div class="form-group">
+                            <input type="number" id="unitsInStock" formControlName="unitsInStock"
+                                class="form-control" placeholder="Stok adedi" />
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="unitPrice">Birim Fiyatı</label>
+                        <div class="form-group">
+                            <input type="number" id="unitPrice" formControlName="unitPrice" class="form-control"
+                                placeholder="Fiyatı" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+          <button type="button" class="btn btn-primary" (click)="update()">Ürünü Güncelle</button>
+        </div>
+      </div>
+    </div>
+  </div>
+

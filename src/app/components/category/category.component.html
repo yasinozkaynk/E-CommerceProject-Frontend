@@ -1,0 +1,9 @@
+<div class="nav justify-content-center ">
+  <ul  class="nav justify-content-center">
+    <button id="button1" (click)="setCurrentCategory(category)" routerLink="products/category/{{category.categoryId}}"
+      *ngFor="let category of categories" class="btn btn-outline-warning">{{category.categoryName}}</button>
+  </ul>
+</div>
+
+<ul></ul>
+
